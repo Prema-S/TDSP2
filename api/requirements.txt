@@ -11,7 +11,7 @@ numpy
 Pillow
 feedparser
 python-dateutil
-requests
+requests==2.28.1
 numpy
 beautifulsoup4
 tabula-py
