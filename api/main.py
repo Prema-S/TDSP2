@@ -110,6 +110,7 @@ async def ga1_q2(question: str) -> str:
   
   
 # GA1 Q3 - Run command with npx?
+@questions_tds(r".*npx -y prettier@3.4.2 README.md.*")
 async def ga1_q3(question: str, file: UploadFile) -> str:
     print(f"?? Called ga1_q3: {question}")
     try:
