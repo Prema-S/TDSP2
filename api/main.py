@@ -56,16 +56,10 @@ NLP_API_URL = "http://aiproxy.sanand.workers.dev/openai/v1/chat/completions"
 function_map: Dict[str, Callable] = {}
 
 # Function to recognise questions using regex pattern
-#def questions_tds(pattern: str):
-#    def decorator(func: Callable):
-#       function_map[pattern] = func
-#        return func
-#    return decorator
-def questions_tds(pattern):
-    """Decorator to register a question handler."""
-    def decorator(func):
-        func.pattern = pattern
-        return func
+def questions_tds(pattern: str):
+    def decorator(func: Callable):
+       function_map[pattern] = func
+       return func
     return decorator
     
 #-------- GA1 questions---------
